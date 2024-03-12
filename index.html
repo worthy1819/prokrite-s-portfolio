@@ -1,4 +1,4 @@
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="light" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +7,19 @@
     <!-- daisyUi  -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- aos  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- EmailJS CDN  -->
+   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+            publicKey: "",
+        });
+        })();
+    </script>
     <!-- title  -->
     <link rel="Website Icon" type="png" href="">
     <title>Prokrite</title>
@@ -29,14 +42,14 @@
         <!-- nav 01  -->
         <div class="navbar w-full hidden lg:flex pt-3">
             <div class="flex-1">
-              <a href="" class="text-3xl mx-4 font-thin italic text-black"><i class="fa-solid fa-leaf text-green-500"></i> Prokrite</a>
+              <a href="#home" class="text-3xl mx-4 font-thin italic text-black"><i class="fa-solid fa-leaf text-green-500"></i> Prokrite</a>
             </div>
             <div class="flex-none">
               <ul class="menu menu-horizontal px-1 text-black">
                 <li><a href="#home" class="mt-1 hover:bg-white hover:border-b-2 hover:border-green-500 rounded-none focus:text-green-600 focus:bg-white focus:border-b-2 focus:border-green-500">HOME</a></li>
-                <li><a href="#features" class="mt-1 hover:bg-white hover:border-b-2 hover:border-green-500 rounded-none focus:text-green-600 focus:bg-white focus:border-b-2 focus:border-green-500">ABOUT</a></li>
-                <li><a href="#portfolio" class="mt-1 hover:bg-white hover:border-b-2 hover:border-green-500 rounded-none focus:text-green-600 focus:bg-white focus:border-b-2 focus:border-green-500">SERVICE</a></li>
-                <li><a href="#resume" class="mt-1 hover:bg-white hover:border-b-2 hover:border-green-500 rounded-none focus:text-green-600 focus:bg-white focus:border-b-2 focus:border-green-500">PROJECTS</a></li>
+                <li><a href="#about" class="mt-1 hover:bg-white hover:border-b-2 hover:border-green-500 rounded-none focus:text-green-600 focus:bg-white focus:border-b-2 focus:border-green-500">ABOUT</a></li>
+                <li><a href="#service" class="mt-1 hover:bg-white hover:border-b-2 hover:border-green-500 rounded-none focus:text-green-600 focus:bg-white focus:border-b-2 focus:border-green-500">SERVICE</a></li>
+                <li><a href="#project" class="mt-1 hover:bg-white hover:border-b-2 hover:border-green-500 rounded-none focus:text-green-600 focus:bg-white focus:border-b-2 focus:border-green-500">PROJECTS</a></li>
                 <li><a href="#contact" class="btn border-2 bg-white border-green-500 text-green-500 hover:bg-white hover:border-green-500 mx-5 transition ease-in-out delay-150 hover:-translate-y-2 hover:scale-100 duration-300 focus:bg-green-500 focus:text-white">CONTACT</a></li>
               </ul>
             </div>
@@ -44,7 +57,7 @@
         <!-- nav 02 -->
         <div class="navbar lg:hidden w-full flex justify-between">
             <div class="">
-                <a href="" class="text-3xl mx-4"><i class="fa-solid fa-leaf text-green-500"></i></a>
+                <a href="#home" class="text-3xl mx-4"><i class="fa-solid fa-leaf text-green-500"></i></a>
             </div>
             <div class="drawer navbar-end">
                 <input id="my-drawer" type="checkbox" class="drawer-toggle" />
@@ -55,9 +68,9 @@
                     <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
                     <ul class="menu p-4 w-80 min-h-full bg-white">
                         <li><a href="#home" class="hover:bg-white hover:border-b-2 hover:border-green-500 rounded-none focus:text-green-600 focus:bg-white focus:border-b-2 focus:border-green-500 m-3">HOME</a></li>
-                        <li><a href="#features" class="hover:bg-white hover:border-b-2 hover:border-green-500 rounded-none focus:text-green-600 focus:bg-white focus:border-b-2 focus:border-green-500 m-3">FEATURES</a></li>
-                        <li><a href="#portfolio" class="hover:bg-white hover:border-b-2 hover:border-green-500 rounded-none focus:text-green-600 focus:bg-white focus:border-b-2 focus:border-green-500 m-3">PORTFOLIO</a></li>
-                        <li><a href="#resume" class="hover:bg-white hover:border-b-2 hover:border-green-500 rounded-none focus:text-green-600 focus:bg-white focus:border-b-2 focus:border-green-500 m-3">RESUME</a></li>
+                        <li><a href="#about" class="hover:bg-white hover:border-b-2 hover:border-green-500 rounded-none focus:text-green-600 focus:bg-white focus:border-b-2 focus:border-green-500 m-3">ABOUT</a></li>
+                        <li><a href="#service" class="hover:bg-white hover:border-b-2 hover:border-green-500 rounded-none focus:text-green-600 focus:bg-white focus:border-b-2 focus:border-green-500 m-3">SERVICES</a></li>
+                        <li><a href="#project" class="hover:bg-white hover:border-b-2 hover:border-green-500 rounded-none focus:text-green-600 focus:bg-white focus:border-b-2 focus:border-green-500 m-3">PROJECTS</a></li>
                         <li><a href="#contact" class="btn bg-green-500 text-white focus:bg-white focus:text-green-500 focus:border-2 focus:border-green-500 mx-5 m-5">CONTACT</a></li>
                     </ul>
                 </div>
@@ -66,7 +79,7 @@
     </div>
     <main class="max-w-screen-xl w-full mx-auto lg:pt-20">
         <!-- hero  -->
-        <div class="grid md:grid-cols-2 mx-auto pt-28 p-10 gap-8" id="home">
+        <div data-aos="fade-down" data-aos-duration="1000" class="grid md:grid-cols-2 mx-auto pt-28 p-10 gap-8" id="home">
             <!-- text  -->
             <div class="">
                 <div class="">
@@ -93,7 +106,7 @@
             </div>
         </div>
         <!-- about me  -->
-        <div class="grid md:grid-cols-2 mx-auto gap-y-4 mt-28 p-8 bg-green-100">
+        <div data-aos="fade-down" data-aos-duration="1000" class="grid md:grid-cols-2 mx-auto gap-y-4 mt-28 p-8 bg-green-100 rounded-t-2xl" id="about">
             <!-- image  -->
             <div class="">
                 <img src="p.jpg" alt="" class="w-9/12 rounded-lg mx-auto">
@@ -116,35 +129,35 @@
             </div>
         </div>
         <!-- service  -->
-        <div class="pt-28 bg-green-100 p-8 md:relative md:pb-32">
+        <div data-aos="fade-down" data-aos-duration="1000" class="pt-28 bg-green-100 p-8 md:relative md:pb-32 rounded-b-2xl" id="service">
             <div class="text-center">
                 <p class="font-semibold"><i class="fa-brands fa-pagelines text-green-500"></i> MY SERVICES <i class="fa-brands fa-pagelines text-green-500"></i></p>
                 <p class="p-3 md:text-4xl text-2xl font-semibold">Crafting digital masterpieces</p>
             </div>
-            <div class="grid md:grid-cols-4 gap-4 p-5 md:absolute md:left-24">
+            <div data-aos="fade-down" data-aos-duration="1000" class="grid md:grid-cols-4 gap-4 p-5 md:absolute md:left-24">
                 <!-- one  -->
-                <a href class="card w-full md:w-60 text-center p-3 border-2 hover:border-green-500 bg-white group">
+                <a data-aos="fade-down" data-aos-duration="1000" href="#contact" class="card w-full md:w-60 text-center p-3 border-2 hover:border-green-500 bg-white group">
                     <p class="p-2"><i class="fa-regular fa-window-restore text-4xl bg-green-500 p-3 rounded-lg"></i></p>
                     <p class="font-bold text-xl py-3">VisualForge</p>
                     <p class="">Crafting Digital Wonders</p>
                     <p class="text-4xl py-3 group-hover:translate-x-2 transition"><i class="fa-solid fa-arrow-right-long text-green-500"></i></p>
                 </a>
                 <!-- two  -->
-                <a href class="card w-full md:w-60 text-center p-3 border-2 hover:border-green-500 bg-white group">
+                <a data-aos="fade-down" data-aos-duration="1000" href="#contact" class="card w-full md:w-60 text-center p-3 border-2 hover:border-green-500 bg-white group">
                     <p class="p-2"><i class="fa-solid fa-code text-4xl bg-green-500 p-3 rounded-lg"></i></p>
                     <p class="font-bold text-xl py-3">CodeWizardry</p>
                     <p class=""> Interactive Experiences</p>
                     <p class="text-4xl py-3 group-hover:translate-x-2 transition"><i class="fa-solid fa-arrow-right-long text-green-500"></i></p>
                 </a>
                 <!-- three  -->
-                <a href class="card w-full md:w-60 text-center p-3 border-2 hover:border-green-500 bg-white group">
+                <a data-aos="fade-down" data-aos-duration="1000" href="#contact" class="card w-full md:w-60 text-center p-3 border-2 hover:border-green-500 bg-white group">
                     <p class="p-2"><i class="fa-solid fa-laptop text-4xl bg-green-500 p-3 rounded-lg"></i></p>
                     <p class="font-bold text-xl py-3">ScreenSync</p>
                     <p class="">Device Harmony</p>
                     <p class="text-4xl py-3 group-hover:translate-x-2 transition"><i class="fa-solid fa-arrow-right-long text-green-500"></i></p>
                 </a>
                 <!-- four  -->
-                <a href class="card w-full md:w-60 text-center p-3 border-2 hover:border-green-500 bg-white group">
+                <a data-aos="fade-down" data-aos-duration="1000" href="#contact" class="card w-full md:w-60 text-center p-3 border-2 hover:border-green-500 bg-white group">
                     <p class="p-2"><i class="fa-solid fa-code-compare text-4xl bg-green-500 p-3 rounded-lg"></i></p>
                     <p class="font-bold text-xl py-3">SwiftSculpt</p>
                     <p class="">Performance Mastery</p>
@@ -153,7 +166,7 @@
             </div>
         </div>
         <!-- project  -->
-        <div class="md:mt-60 p-8">
+        <div data-aos="fade-down" data-aos-duration="1000" class="md:mt-60 p-8" id="project">
             <div class="grid md:grid-cols-2 gap-8">
                 <div class="">
                     <p class="leading-loose font-semibold">MY PROJECTS <i class="fa-brands fa-pagelines text-green-500"></i></p>
@@ -162,9 +175,9 @@
                 <div class="flex items-end">Crafting captivating digital experiences. From responsive designs to dynamic functionality, I blend design and code seamlessly. Join us in shaping the future of the web, where innovation knows no bounds.</div>
             </div>
             <!-- projects  -->
-            <div class="my-10 p-5">
+            <div class="my-10 md:p-5">
                 <!-- one  -->
-                <div class="grid md:grid-cols-2 gap-6 my-10">
+                <div data-aos="fade-down" data-aos-duration="1000" class="grid md:grid-cols-2 gap-6 my-10">
                     <!-- img  -->
                     <div class="">
                         <img src="" alt="" class="w-9/12 rounded-xl">
@@ -177,7 +190,7 @@
                     </div>
                 </div>
                 <!-- two  -->
-                <div class="grid md:grid-cols-2 gap-6 my-10">
+                <div data-aos="fade-down" data-aos-duration="1000" class="grid md:grid-cols-2 gap-6 my-10">
                     <!-- text  -->
                     <div class="md:border-l-2 md:border-green-500 p-5">
                         <p class="font-semibold text-3xl leading-loose">Heading</p>
@@ -190,7 +203,7 @@
                     </div>
                 </div>
                 <!-- three  -->
-                <div class="grid md:grid-cols-2 gap-6 my-10">
+                <div data-aos="fade-down" data-aos-duration="1000" class="grid md:grid-cols-2 gap-6 my-10">
                     <!-- img  -->
                     <div class="">
                         <img src="" alt="" class="w-9/12 rounded-xl">
@@ -204,6 +217,95 @@
                 </div>
             </div>
         </div>
+        <!-- skill  -->
+        <div data-aos="fade-down" data-aos-duration="1000" class="p-8 mb-10">
+            <div class="text-center mb-20">
+                <p class="font-semibold"><i class="fa-brands fa-pagelines text-green-500"></i> EXPERTISE <i class="fa-brands fa-pagelines text-green-500"></i></p>
+            </div>
+            <div data-aos="fade-down" data-aos-duration="1000" class="flex md:justify-evenly flex-wrap md:flex-row justify-center items-center gap-2">
+                <img src="html.png" alt="" class="w-32 hover:origin-top-left hover:rotate-12 transition-all">
+                <img src="css.png" alt="" class="w-32 hover:origin-top-left hover:rotate-12 transition-all">
+                <img src="bootstrap.png" alt="" class="w-32 hover:origin-top-left hover:rotate-12 transition-all">
+                <img src="javascript.png" alt="" class="w-32 hover:origin-top-left hover:rotate-12 transition-all">
+                <img src="github.png" alt="" class="w-32 hover:origin-top-left hover:rotate-12 transition-all">
+                <img src="figma.png" alt="" class="w-32 hover:origin-top-left hover:rotate-12 transition-all">
+                <img src="ux-design.png" alt="" class="w-32 hover:origin-top-left hover:rotate-12 transition-all">
+            </div>
+        </div>
+        <!-- contact  -->
+        <div data-aos="fade-down" data-aos-duration="1000" class="md:p-8 p-4 mb-10 md:pt-28 md:mt-20 md:flex md:relative md:bg-white" id="contact">
+            <!-- text  -->
+            <div data-aos="fade-down" data-aos-duration="1000" class="p-10 flex gap-4 flex-col bg-green-100 w-full rounded-2xl">
+                <p class="font-semibold text-2xl md:text-4xl"><i class="fa-brands fa-pagelines text-green-500"></i> CONTACT ME <i class="fa-brands fa-pagelines text-green-500"></i></p>
+                <p class="">Transforming digital dreams into stunning realities. Let's build your vision together.
+                <br>
+                Connect for next-level web experiences!</p>
+                <p class=""><i class="fa-solid fa-location-dot"></i> Habiganj Sadar, Sylhet, Bangladesh</p>
+                <p class=""><i class="fa-solid fa-envelope"></i> prokritedas@gmail.com</p>
+                <p class=""><i class="fa-solid fa-phone"></i> +880 1812 773945</p>
+                <div class="mt-5">
+                    <i class="fa-brands fa-facebook btn text-3xl bg-transparent border-0 hover:bg-transparent transition-all hover:text-green-500 hover:origin-top-left hover:rotate-12"></i>
+                    <i class="fa-brands fa-instagram btn text-3xl bg-transparent border-0 hover:bg-transparent transition-all hover:text-green-500 hover:origin-top-left hover:rotate-12"></i>
+                    <i class="fa-brands fa-github btn text-3xl bg-transparent border-0 hover:bg-transparent transition-all hover:text-green-500 hover:origin-top-left hover:rotate-12"></i>
+                </div>
+            </div>
+            <!-- form  -->
+            <div data-aos="fade-down" data-aos-duration="1000" class="md:max-w-lg md:mx-auto md:absolute top-0 right-16 md:mt-0 mt-7">
+                <form class="bg-white shadow-2xl rounded-2xl px-8 pt-6 pb-8 mb-4" id="form">
+                    <div class="mb-4 md:flex md:gap-2 grid gap-y-4">
+                        <input class="shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" type="text" placeholder="Name">
+                        <input class="shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" placeholder="Email">
+                    </div>
+                    <div class="mb-4">
+                        <input class="shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="subject" type="text" placeholder="Subject">
+                    </div>
+                    <div class="mb-6">
+                        <textarea class="shadow appearance-none border rounded w-full h-32 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="message" placeholder="Message"></textarea>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <a class="btn bg-green-500 hover:bg-green-500 transition-all hover:-translate-y-2 btn-block text-black rounded-lg focus:outline-none focus:shadow-outline" type="button" id="submit-btn">
+                        Send
+                        </a>
+                    </div>
+                </form>
+            </div>              
+        </div>
     </main>
+    <!-- footer  -->
+    <footer data-aos="fade-down" data-aos-duration="1000" class="bg-green-100 grid md:grid-cols-2 p-3 md:p-8 md:px-32">
+        <div class="">
+            <p class="md:text-6xl text-5xl font-light my-10"><i class="fa-brands fa-pagelines text-green-500"></i> LET'S WORK <br> <span class="font-bold">TOGETHER!</span></p>
+            <div class="bg-white p-4 inline-block md:p-6 md:pe-28 border-e-4 border-green-500">
+                <p class="md:text-2xl text-xl font-bold"><i class="fa-solid fa-comment text-green-500"></i> prokritedas@gmail.com</p>
+            </div>
+            <div class="mt-10 mb-5">
+                <i class="fa-brands fa-facebook btn text-3xl bg-white border-0 hover:bg-white transition-all hover:text-green-500 hover:origin-top-left hover:rotate-12"></i>
+                <i class="fa-brands fa-instagram btn text-3xl bg-white border-0 hover:bg-white transition-all hover:text-green-500 hover:origin-top-left hover:rotate-12"></i>
+                <i class="fa-brands fa-github btn text-3xl bg-white border-0 hover:bg-white transition-all hover:text-green-500 hover:origin-top-left hover:rotate-12"></i>
+            </div>
+        </div>
+        <div class="p-4 md:mt-10">
+            <a href="#home" class="text-4xl font-thin italic text-black"><i class="fa-solid fa-leaf text-green-500"></i> Prokrite</a>
+            <p class="my-10">Transforming digital dreams into stunning realities. Let's build your vision together. Connect for next-level web experiences!</p>
+            <div class="my-10 flex flex-wrap gap-4">
+                <a href="#home" class="btn bg-white p-4 rounded-full hover:bg-white hover:text-green-500 border-0">HOME</a>
+                <a href="#about" class="btn bg-white p-4 rounded-full hover:bg-white hover:text-green-500 border-0">ABOUT</a>
+                <a href="#service" class="btn bg-white p-4 rounded-full hover:bg-white hover:text-green-500 border-0">SERVICE</a>
+                <a href="#project" class="btn bg-white p-4 rounded-full hover:bg-white hover:text-green-500 border-0">PROJECTS</a>
+            </div>
+        </div>
+    </footer>
+    <footer class="footer bg-green-100 footer-center p-4 border-t-2 border-green-500/30">
+        <aside>
+          <p>Copyright ©2024 - All right reserved</p>
+        </aside>
+    </footer>
+    <!-- javascript -->
+    <script src="index.js"></script>
+    <script>
+        AOS.init({
+            once: true
+        });
+    </script>
 </body>
 </html>
