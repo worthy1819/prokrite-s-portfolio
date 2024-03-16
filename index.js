@@ -1,8 +1,8 @@
 const form = document.getElementById('form');
 const submitBtn = document.getElementById('submit-btn');
 
-const serviceId = 'YOUR_SERVICE_ID'; // Replace with your EmailJS service ID
-const templateId = 'YOUR_TEMPLATE_ID'; // Replace with your EmailJS template ID
+const serviceId = 'service_md20rz9'; // Replace with your EmailJS service ID
+const templateId = 'template_kieglvc'; // Replace with your EmailJS template ID
 
 form.addEventListener("submit", async (e) => {
    e.preventDefault();
@@ -10,7 +10,7 @@ form.addEventListener("submit", async (e) => {
       name: e.target["name"].value,
       email: e.target["email"].value,
       subject: e.target["subject"].value,
-      message: e.target["message"].value.trim()
+      message: e.target["message"].value
    };
 
    console.log(params);
